@@ -16,7 +16,7 @@ const sonnet = `Let me not to the marriage of true minds
 // Unique words
 let uniques = {};
 // All words in the text
-let words = sonnet.match(/\w+/g);
+let words = sonnet.match(/\w+\'\w+/g);
 
 // Iterate through `words`and build up an associative array of unique words.
 for (let i = 0; i< words.length; i++) {
