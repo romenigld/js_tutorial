@@ -6,5 +6,5 @@ function palindrome(string) {
 
 // Reverses a String
 function reverse(string) {
-  return string.split("").reverse().join("");
+  return Array.from(string).reverse().join("");
 }
