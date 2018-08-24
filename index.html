@@ -3,31 +3,10 @@
   <head>
     <title>Learn Enough JavaScript</title>
     <meta charset="utf-8">
+    <script src="day.js"></script>
     <script>
-      const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
-                             "Friday", "Saturday"];
-      const monthsOfTheYear = [ "January", "February", "March", "April", "May",
-                                "June", "July", "August", "September", "October",
-                                "November", "December"];
-      const myBirthday = new Date("April 24, 1984 23:10");
-      const moonLanding = new Date("July 20, 1969 20:18");
-
       let now = new Date();
-      let dayName = daysOfTheWeek[now.getDay()];
-
-      alert(`Hello, World! Happy ${dayName}.`);
-
-      // alerts about my birthday
-      alert(`The day I born was ${daysOfTheWeek[myBirthday.getDay()]}.`);
-      alert(`The month I born was ${monthsOfTheYear[myBirthday.getMonth()]}.`);
-      alert(`The Year I born was ${myBirthday.getFullYear()}.`);
-      alert(`The hour I born was ${myBirthday.getHours()}:${myBirthday.getMinutes()}.`);
-      alert(`My age now is ${now.getFullYear() - myBirthday.getFullYear()}.`);
-
-      //The millisecons after the Moon landing were you born?
-      alert(`The millisecons after the Moon landing were I born was ${myBirthday - moonLanding}.`);
-      alert(`The years after the Moon landing since I born is ${myBirthday.getFullYear() - moonLanding.getFullYear()}.`);
-      alert(`The years after the Moon landing since today is ${now.getFullYear() - moonLanding.getFullYear()}.`);
+      greeting(now);
     </script>
   </head>
   <body>
