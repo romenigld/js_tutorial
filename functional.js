@@ -45,3 +45,16 @@ function functionalSingles(elements) {
   return elements.filter(element => element.split(/\s+/).length === 1);
 }
 console.log(functionalSingles(states));
+
+// Exercise 6.2.1
+// filter function that return the string which has the string 'Dakota'
+function functionalIncludesDakota(elements) {
+  return elements.filter(element => element.includes("Dakota"));
+}
+console.log(functionalIncludesDakota(states));
+
+// filter function using a regex that test for the length of the split array being 2
+function functionalSplitTwo(elements) {
+  return elements.filter(element => element.split(/\s+/).length === 2);
+}
+console.log(functionalSplitTwo(states));
