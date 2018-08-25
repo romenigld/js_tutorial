@@ -95,3 +95,10 @@ function functionalLengths(elements){
                         }, {});
 }
 console.log(functionalLengths(states));
+
+/* Exercise 1 -Using reduce, write a function that returns the product
+of all the elements in an array. Hint: Where += adds, *= multiplies. */
+function functionalMultiply(elements) {
+  return elements.reduce((total, n) => { return total *= n; });
+}
+console.log(functionalMultiply(numbers));
