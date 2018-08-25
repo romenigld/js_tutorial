@@ -102,3 +102,11 @@ function functionalMultiply(elements) {
   return elements.reduce((total, n) => { return total *= n; });
 }
 console.log(functionalMultiply(numbers));
+
+/* Exercise 2 - Remove the newlines in the reduce solution from Listing 62
+to turn it into a single long line. Does it still give the right answer?
+How long is the resulting line of code? */
+function functionalLengthsSingleLongLine(elements){
+  return elements.reduce((lengths, element) => { lengths[element] = element.length; return lengths; }, {});
+}
+console.log(functionalLengthsSingleLongLine(states));
