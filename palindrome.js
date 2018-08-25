@@ -11,9 +11,26 @@ function Phrase(content) {
   this.louder = function() {
     return this.content.toUpperCase();
   }
+
+  // Returns content processed for aplindrome testing.
+  this.processedContent = function processedContent() {
+    return this.content.toLowerCase();
+  }
   // Returns true if the phrase is a palindorme, false otherwise.
   this.palindrome = function palindrome() {
-    let processedContent = this.content.toLowerCase();
-    return processedContent === reverse(processedContent);
+    return this.processedContent() === reverse(this.processedContent());
   }
 }
+
+// Defines a TranslatedPhrase object.
+function TranslatedPhrase(content, translation) {
+  this.content = content;
+  this.translation = translation;
+
+  // Returns translation processed for palindrome testing.
+  this.processedContent = function processedContent() {
+    return this.translation.toLowerCase();
+  }
+}
+
+TranslatedPhrase.prototype = new Phrase();
