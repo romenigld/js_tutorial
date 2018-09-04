@@ -8,5 +8,9 @@ text.split("\n").forEach(function(line) {
   let phrase = new Phrase(line);
   if (phrase.palindrome()) {
     console.log("palindrome detected:", line);
+    fs.appendFileSync("palindromes.txt", line + '\n',  "utf-8", (err) => {
+      if (err) throw err;
+      console.log("Palindrome saved!")
+    })
   }
 });
